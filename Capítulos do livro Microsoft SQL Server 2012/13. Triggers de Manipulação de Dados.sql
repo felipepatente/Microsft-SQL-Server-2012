@@ -1,0 +1,29 @@
+CREATE TRIGGER TRG_INSERIR_PILOTO
+ON PILOTO
+FOR INSERT
+AS
+BEGIN
+	DECLARE @Codigo INT
+	DECLARE @Nascimento DATE
+
+	SELECT @Codigo		= Codigo,
+		   @Nascimento	= Nascimento
+	FROM inserted
+
+	IF @Nascimento > CAST(GETDATE() AS DATE) BEGIN
+		UPDATE PILOTO SET Nascimento = CAST(GETDATE() AS DATE) WHERE Codigo = @Codigo
+	END
+
+END
+
+--Testando as TRIGGERs
+INSERT INTO PILOTO(Nome,Nascimento) VALUES('Vettel','2019-08-20')
+INSERT INTO PILOTO(Nome,Nascimento) VALUES('Lew','2019-08-02')
+
+--Desabilitando uma trigger
+GO
+DISABLE TRIGGER TRG_INSERIR_PILOTO ON PILOTO
+
+--Habilitando uma trigger
+GO
+ENABLE TRIGGER TRG_INSERIR_PILOTO ON PILOTO
