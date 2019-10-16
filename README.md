@@ -1,4 +1,4 @@
-# Microsft-SQL-Server-2012
+# Microsoft-SQL-Server-2012
 Capítulos estudados do livro Microsoft SQL Server 2012, onde foi visto: 
   * Criação de banco de dados, 
   * Construção e manutenção de índices; 
