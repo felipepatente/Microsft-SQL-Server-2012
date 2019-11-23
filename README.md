@@ -12,3 +12,18 @@ Capítulos estudados do livro Microsoft SQL Server 2012, onde foi visto:
   * Funções definidas pelo usuário, 
   * Stored procedures, 
   * Triggers de manipulação de dados e database mail.
+
+
+# Microsoft-SQL-Server-2016
+Capítulos estudados do livro Microsoft SQL Server 2012, onde foi visto: 
+  * Estrutura de Dados e Consultas,
+  * Consultas com Operadores,
+  * Funções Transact-SQL,
+  * Agrupamentos e Uniões,
+  * Junções e Visualizações,
+  * Recursos complementares,
+  * Sub-Rotinas em T-SQL
+
+
+
+
